@@ -70,12 +70,17 @@ This project implements a game engine midterm assignment with the following feat
 
 ### Windows (Visual Studio 2022)
 
-1. Download SDL3 development libraries from https://github.com/libsdl-org/SDL/releases
-2. Extract to `External/SDL3/` directory
-3. Open CMakeLists.txt with Visual Studio or create a solution
+#### Option 1: Using Visual Studio Solution (Recommended)
+
+1. Download SDL3-3.4.0 development libraries from https://github.com/libsdl-org/SDL/releases
+2. Extract to `External/SDL3-3.4.0/` directory
+3. Double-click `SDLLevels.sln` to open in Visual Studio
 4. Build and run (F5)
 
-Alternatively, use CMake:
+For detailed instructions, see [VISUAL_STUDIO_SETUP.md](VISUAL_STUDIO_SETUP.md)
+
+#### Option 2: Using CMake
+
 ```cmd
 mkdir build
 cd build
@@ -83,10 +88,17 @@ cmake ..
 cmake --build . --config Release
 ```
 
+For detailed CMake instructions, see [BUILD.md](BUILD.md)
+
 ## Project Structure
 
 ```
 GameEngineMidterm/
+├── SDLLevels.sln          # Visual Studio solution
+├── SDLLevels.vcxproj      # Visual Studio project
+├── SDLLevels.vcxproj.filters  # File organization
+├── SDLLevels.vcxproj.user     # Debug settings
+├── CMakeLists.txt         # CMake build file
 ├── Assets/
 │   └── Textures/          # TGA sprite sheets
 │       ├── warrior_run.tga    (384x64 - 6 frames)
@@ -124,8 +136,9 @@ GameEngineMidterm/
 │   ├── Level2.cpp
 │   └── GameController.cpp
 ├── External/              # Third-party libraries
-│   └── SDL3/
-├── CMakeLists.txt
+│   └── SDL3-3.4.0/
+├── BUILD.md               # CMake build instructions
+├── VISUAL_STUDIO_SETUP.md # VS setup instructions
 └── README.md
 ```
 
