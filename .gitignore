@@ -28,6 +28,9 @@ Level2.bin
 External/SDL3/lib/
 External/SDL3/bin/
 
+# CodeQL analysis files
+_codeql_*/
+
 # Temporary files
 *.tmp
 *~
