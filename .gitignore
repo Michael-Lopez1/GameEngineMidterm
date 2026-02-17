@@ -4,7 +4,8 @@
 *.suo
 *.sdf
 *.opensdf
-*.vcxproj.user
+# Allow SDLLevels.vcxproj.user with default portable settings
+!SDLLevels.vcxproj.user
 
 # Build outputs
 bin/
